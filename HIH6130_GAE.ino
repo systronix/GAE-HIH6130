@@ -37,6 +37,7 @@ uint32_t dtime;  // delay time in msec
 
 #define MIN_15 900000  // msec in 15 min = 900,000
 #define MIN_1 60000 // msec in 1 minute = 60,000
+#define MIN_5 300000 // msec in 5 min
 
 // assign a MAC address for the ethernet controller.
 // fill in your address here:
@@ -59,7 +60,7 @@ void setup(void)
    Serial.println("HIH6130 Proof 2013 Aug 31"); 
    delay(3000);  // wait for all devices to stabilize and complete any internal startup
    Serial.print("Sample interval ");  // just to be sure things are working
-   dtime = MIN_1;  //delay between readings
+   dtime = MIN_5;  //delay between readings
    Serial.print(dtime/1000);
    Serial.println(" sec");
    
